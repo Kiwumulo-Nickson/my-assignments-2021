@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+/>
+<title>Document</title>
+</head>
+<body>
+<h1 style="color: blue">My Todo-s</h1><br>
+<div>
+<input type="text" id="editor" placeholder="Add new..." />
+<button type="submit" id="checkboxAdd">Add</button>
+</div>
+<br>
+<!-- For sorting and filtering -->
+<form action="">
+    <label for="cars">Filter</label>
+<select id="cars" name="cars" size="1" multiple>
+<option value="fiat">All</option>
+<option value="volvo">Groceries</option>
+<option value="saab">Car</option></select
+>
+<label for="cars">Sort</label>
+<select id="cars" name="cars" size="1" multiple>
+<option value="volvo">Added date</option>
+<option value="saab">Car</option>
+<option value="fiat">Authentifications</option></select>
+</form>
+<!-- Checkboxes -->
+<div>
+<form action="" id="myForm">
+<input type="checkbox" />
+<label for="">Buy groceries for next week</label><br />
+<input type="checkbox" />
+<label for="">Renew car insurance</label><br />
+<input type="checkbox" />
+<label for="">Sign up for online course</label>
+<div id="container"></div>
+</form>
+</div>
+</body>
+<script src="./final.js"></script>
+</html>

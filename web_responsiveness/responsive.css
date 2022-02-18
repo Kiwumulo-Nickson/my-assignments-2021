@@ -1,0 +1,177 @@
+body {
+    background-color:whitesmoke;
+    }
+    h1{
+    text-align:center;
+
+    }
+    #demo {
+    background-color:white;
+    text-align: center;
+    margin: 25px 50px 75px 100px;
+    padding:20px;
+    }
+    #button {
+    background-color:blue;
+    color:white;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    margin: 2px 2px;
+    cursor: pointer;
+
+    }
+    .add {
+    background-color:rgba(255, 255, 255, 0.856);
+    border-style:hidden;
+
+    
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    }
+    #form1{
+    background-color:white;
+    border-style: none;
+    }
+    .filter{
+    background-color:white;
+    text-align: right;
+    }
+    .checkbox{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    }
+    .checkboxInput{
+    display:none;
+    }
+    .checkboxBox1{
+    width: 1.25em;
+    height:1.25em;
+    border: 2px solid #2266dc ;
+    border-radius: 3px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+    flex-shrink: 0;
+    }
+    .checkboxBox1::after{
+    content: '\2714';
+    color:#2266dc;
+    }
+    .checkboxInput:checked +.checkboxBox1{
+    background-color: #fff;
+    border: color #2266dc;
+    }
+    .checkboxa{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    }
+    .checkboxaInput{
+    display:none;
+    }
+    .checkboxBox2{
+    width: 1.25em;
+    height:1.25em;
+    border: 2px solid #2266dc ;
+    border-radius: 3px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+    flex-shrink: 0;
+    }
+    .date::-webkit-datetime-edit{
+    color: red;
+    }
+    .date:focus::-webkit-datetime-edit{
+    color: #000;
+    }
+    .blue-color {
+    color:blue;
+    }
+    .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    hr.solid{
+    border-top: 1px solid #bbb; }
+    #datePicker{
+    text-align: right;
+    float: right;
+    padding: 10px;
+    background-color: white;
+    border-style: solid;
+    border-color:goldenrod;
+    }
+    
+    /* Mobile devices */
+    @media only screen and (max-width: 768px) {
+h1 {
+    text-align: center;
+    display: flex;
+} 
+#demo {
+    background-color:white;
+    text-align: center;
+    padding:20px;
+    justify-content: center;
+    }
+
+#form1{
+    width:99%;
+    background-color:white;
+    overflow: scroll;
+    }
+    .checkboxBox1{
+        width: 0.25em;
+        
+        }
+        .checkboxBox2 {
+            width: 0.5em;
+        } 
+
+
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 768px) and (max-width:1025px) {
+        #form1{
+            width:88.6%;
+            justify-content: center;
+            position: -webkit-sticky;
+            position:sticky;
+            }
+            .checkboxBox1{
+                width: 0.9em;
+                
+                }
+                .checkboxBox2 {
+                    width: 1.2em;
+                } 
+    }
+    /* Desktop devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1025px) {
+        #form1{
+            width:86%;
+            justify-content: center;
+            }
+            .checkboxBox1{
+                width: 1.4em;
+                
+                }
+                .checkboxBox2 {
+                    width: 1.6em;
+                } 
+
+    }

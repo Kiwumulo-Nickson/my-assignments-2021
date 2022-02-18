@@ -1,0 +1,106 @@
+body {
+background-color:whitesmoke;
+}
+h1{
+text-align:center;
+}
+#demo {
+background-color:white;
+text-align: center;
+margin: 25px 50px 75px 100px;
+padding:20px;
+}
+#button {
+background-color:blue;
+color:white;
+border: none;
+padding: 20x 20px;
+text-decoration: none;
+margin: 2px 2px;
+cursor: pointer;
+}
+.add {
+background-color:rgba(255, 255, 255, 0.856);
+border-style:hidden;
+}
+#form1{
+background-color:white;
+border-style: none;
+}
+.filter{
+background-color:white;
+text-align: right;
+}
+.checkbox{
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+}
+.checkboxInput{
+display:none;
+}
+.checkboxBox{
+width: 1.25em;
+height:1.25em;
+border: 2px solid #2266dc ;
+border-radius: 3px;
+display:flex;
+align-items: center;
+justify-content: center;
+margin-right:10px;
+flex-shrink: 0;
+}
+.checkboxBox::after{
+content: '\2714';
+color:#2266dc;
+}
+.checkboxInput:checked +.checkboxBox{
+background-color: #fff;
+border: color #2266dc;
+}
+.checkboxa{
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+}
+.checkboxaInput{
+display:none;
+}
+.checkboxaBox{
+width: 1.25em;
+height:1.25em;
+border: 2px solid #2266dc ;
+border-radius: 3px;
+display:flex;
+align-items: center;
+justify-content: center;
+margin-right:10px;
+flex-shrink: 0;
+}
+.date::-webkit-datetime-edit{
+color: red;
+}
+.date:focus::-webkit-datetime-edit{
+color: #000;
+}
+.blue-color {
+color:blue;
+}
+.btn {
+background-color: DodgerBlue;
+border: none;
+color: white;
+padding: 12px 16px;
+font-size: 16px;
+cursor: pointer;
+}
+hr.solid{
+border-top: 1px solid #bbb; }
+#datePicker{
+text-align: right;
+float: right;
+padding: 10px;
+background-color: white;
+border-style: solid;
+border-color:goldenrod;
+}

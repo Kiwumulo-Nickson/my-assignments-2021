@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css_assignment.css" />
+    <script src="https://kit.fontawesome.com/47ef46fcd3.js" crossorigin="anonymous"></script> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
+    <title>HTML TEST</title>
+  </head>
+  <body>
+    <h1 style="color: blue">
+      <img src="./includes/logo.png" alt="Todo-s" width="40px" height="40px" />
+      <u>My Todo-s</u>
+    </h1>
+    <br /> 
+    <div id="demo">
+      <input type="text" class="add" placeholder="Add new..."   />      <i class="fa-regular fa-calendar-days blue-color" ></i>
+
+      <span class="addTodo">Add</span>
+      <!-- <button class="btn"><i class="fa fa-add"></i>Add</button> -->
+
+      <!-- <button type="submit" id="button">Add</button> -->
+    </div>
+    <br />
+
+    <!-- For sorting and filtering -->
+    <form action="" id="form1">
+      <hr class="solid">
+      <div class="filter">
+        <label for="cars">Filter</label>
+        <select id="cars" name="cars" size="1" multiple>
+          <option value="all">All</option>
+          <option value="groceries">Groceries</option>
+          <option value="car">Car</option>
+        </select>
+        <label for="cars">Sort</label>
+        <select id="cars" name="cars" size="1" multiple>
+          <option value="volvo">Added date</option>
+          <option value="saab">Car</option>
+          <option value="fiat">Authentifications</option>
+        </select>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="js">
+        <label class="checkbox" for="smId">
+          <input
+            checked
+            class="checkboxInput"
+            type="checkbox"
+            name="myCheckbox"
+            id="smId"
+          />
+          <div class="checkboxBox"></div>
+          Buy groceries for next week </label
+        >
+      </div><br />
+      <div class="js">
+        <label class="checkboxa" for="smIda">
+          <input
+            checked
+            class="checkboxaInput"
+            type="checkboxa"
+            name="myCheckboxa"
+            id="smIda"
+          />
+          <div class="checkboxaBox"></div>
+          Renew car insurance </label
+        >
+        <input type="date" id="datePicker">
+      </div><br />
+      <div class="js">
+        <label class="checkboxa" for="smIda">
+          <input
+            checked 
+            class="checkboxaInput"
+            type="checkboxa" 
+            name="myCheckboxa"
+            id="smIda"
+          />
+          <div class="checkboxaBox"></div>
+          Sign up for online course
+        </label>
+      </div>
+
+    </form>
+
+
+
+  </body>
+  <script src="./js_trial3.js"></script>
+</html>
