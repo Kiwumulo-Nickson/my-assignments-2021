@@ -1,0 +1,83 @@
+body {
+    background-color:whitesmoke;
+    }
+    h1{
+    text-align:center;
+
+    }
+
+    #demo {
+        background-color:white;
+        text-align: center;
+        margin: 25px 50px 75px 100px;
+        padding:20px;
+        }
+
+        #checkboxAdd {
+            background-color:blue;
+            color:white;
+            border: none;
+            padding: 10px;
+            text-decoration: none;
+            margin: 2px 2px;
+            cursor: pointer;
+        
+            } 
+            
+            #editor {
+                background-color:rgba(255, 255, 255, 0.856);
+                border-style:hidden;
+            
+                
+                margin: 0;
+                border: none;
+                border-radius: 0;
+                width: 75%;
+                padding: 10px;
+                float: left;
+                font-size: 16px;
+                }      
+                #myForm{
+                    background-color:white;
+                    border-style: none;
+                    } 
+                    
+               
+    .checkboxBox1{
+        width: 1.25em;
+        height:1.25em;
+        border: 2px solid #2266dc ;
+        border-radius: 3px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-right:10px;
+        flex-shrink: 0;
+        }
+        .checkboxBox1::after{
+        content: '\2714';
+        color:#2266dc;
+        }
+        .checkboxInput:checked +.checkboxBox1{
+        background-color: #fff;
+        border: color #2266dc;
+        }
+        .checkboxa{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        }
+        .checkboxaInput{
+        display:none;
+        }
+        .checkboxBox2{
+        width: 1.25em;
+        height:1.25em;
+        border: 2px solid #2266dc ;
+        border-radius: 3px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-right:10px;
+        flex-shrink: 0;
+        }     

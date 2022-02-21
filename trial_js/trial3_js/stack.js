@@ -29,6 +29,28 @@ listItem.appendChild(checkBox);
 listItem.appendChild(span);
 list.appendChild(listItem);
 }
+  // test
+var span = document.createElement("span");
+span.id = "item_" + id;
+span.innerText = itemText;
+//create edit
+var edit = document.createElement("a");
+edit.href = "#";
+edit.innerText = "edit";
+//create delete
+var deleteBtn = document.createElement("a");
+deleteBtn.href = "#";
+deleteBtn.innerText = "delete";
+
+
+listItem.appendChild(checkBox);
+listItem.appendChild(span);
+//and append them in li
+listItem.appendChild(edit);
+listItem.appendChild(deleteBtn);
+
+list.appendChild(listItem);
+// test
 
 var inItemText = document.getElementById("inItemText");
 inItemText.focus();
