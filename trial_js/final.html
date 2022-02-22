@@ -21,6 +21,7 @@ wesome.min.css'>
         <u>My Todo-s</u>
       </h1>
   <div id="demo">
+    <i class="fa-regular fa-calendar-days " ></i>
 <input type="text" id="editor" placeholder="Add new..." />
 <span type="submit" id="checkboxAdd" onclick="newCheckboxlist()">Add</span>
 </div>
@@ -42,21 +43,27 @@ wesome.min.css'>
 <!-- Checkboxes -->
 <div>
 <form action="" id="myForm">
-<input type="checkbox" class="checkboxInput" />
-<label class="checkbox" for="">Buy groceries for next week</label>
-<div class="checkboxBox1"></div>
-
+<div class="checkboxBox" id="by-groceries"><input type="checkbox" class="checkboxInput" />
+    <label class="checkbox" for="">Buy groceries for next week</label>
+    </div>
+    <!-- creating the close button with html and not js -->
+<!-- -append the entire div holdilng the input , lable and button. -->
 <!-- <button>Edit</button>
 <button>Delete</button> -->
 <br />
-<input type="checkbox" />
-<label for=""  class="checkboxa">Renew car insurance</label><br />
-<input type="checkbox" class="checkboxaInput"/>
-<label for="" 
->Sign up for online course</label>
-<div class="checkboxBox2"></div>
 
-<div id="container"></div>
+<div class="checkboxBox"  ><input type="checkbox" class="checkboxaInput"
+    />
+    <label for=""  class="checkbox">Renew car insurance</label>
+    </div>
+<br />
+
+<div class="checkboxBox"><input type="checkbox" class="checkboxaInput"/>
+    <label for="" class="checkbox"
+    >Sign up for online course</label>
+    <div id="container"></div>
+</div>
+
 </form>
 </div>
 </body>

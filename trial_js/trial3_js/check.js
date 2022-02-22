@@ -17,3 +17,28 @@ document.getElementById('submit').onclick = function() {
     container.appendChild(label);
     container.appendChild(br);
 }
+
+//jquery  long and short codes
+
+
+$(document).ready(function() {
+    $('#submit').click(function() {
+      $('#container')
+        .append('<input type="checkbox" id="car" name="interest" value="car">')
+        .append('<label for="car">Car</label></div>')
+        .append(`<br>`);
+    })
+});
+
+
+
+//shorter code
+
+$(document).ready(function() {
+    $('#submit').click(function() {
+      $('#container')
+        .append('<input type="checkbox" id="car" name="interest" value="car">')
+        .append('<label for="car">Car</label></div>')
+        .append(`<br>`);
+    })}
+

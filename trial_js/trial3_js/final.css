@@ -41,9 +41,22 @@ body {
                     background-color:white;
                     border-style: none;
                     } 
+
+                    /* .close {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding: 12px 16px 12px 16px;
+                        background-color: aqua;
+                      } 
+                      .close:hover {
+                        background-color: #f44336;
+                        color: white;
+                      } */
+                          
                     
                
-    .checkboxBox1{
+    /* .checkboxBox1{
         width: 1.25em;
         height:1.25em;
         border: 2px solid #2266dc ;
@@ -80,4 +93,4 @@ body {
         justify-content: center;
         margin-right:10px;
         flex-shrink: 0;
-        }     
+        }      */

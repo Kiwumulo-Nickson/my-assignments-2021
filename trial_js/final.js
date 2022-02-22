@@ -2,7 +2,8 @@
 
 // const input =document.querySelector("#editor")
 
-var myNodelist = document.getElementsByTagName("Label");
+var myNodelist = document.getElementsByClassName("checkboxBox");
+console.log(myNodelist)
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -28,14 +29,14 @@ function newCheckboxlist() {
 checkbox.type = 'checkbox';
     checkbox.id = 'car';
     checkbox.name = 'interest';
-    //   checkbox.value = task;
+       checkbox.className = 'checkboxBox';
 		//  checkbox.setAttribute('readonly', 'readonly');
 
 
     var label = document.createElement('label')
     var inputValue = document.getElementById("editor").value;
     var t = document.createTextNode(inputValue);
-    // label.htmlFor = 'car';
+     label.className = 'checkbox';
     // label.appendChild(document.createTextNode('Car'));
     label.appendChild(t);
     if (inputValue === '') {
