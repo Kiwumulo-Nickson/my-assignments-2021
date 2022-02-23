@@ -8,20 +8,77 @@
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
+      //Function runs on page load 
 $(document).ready(function(){
-  $("button").click(function(){
-    $("p").hide();
+  //Add a button click event
+  $("#checkboxAdd").click(function(){
+    addTodos();
   });
 });
+
+ function addTodos(){
+
+var myRows= $("#tableid  tr").length,
+$("#tableid  tr:last").after('\
+<tr>\
+<td class="row-data" > <label for="chechInputid-'+ myRows'" ><input type="checkbox"class="checkboxaInput"id="chechInputid-'+ myRows'" />Renew car insurance</label ></td>\
+        <td class="table-date"  id="date_row1"></td>\
+        <td  id="button_row1"> <button type="button" class="btn-icon" id="edittingRows" onclick="editRow()" > <i class="fas fa-edit" aria-hidden="true"></i> </button> </td>\
+        <td><button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this)"> <i class="fas fa-trash" ></i> </button>  </td>\
+      </tr>\
+      ');
+
+
+ }
 
     </script>
 </head>
 <body>
-    <h2>This is a heading</h2>
+  <h1 style="color: blue">
+    <img
+      src="../../includes/logo.png"
+      alt="Todo-s"
+      width="40px"
+      height="40px"
+    />
+    <u>My Todo-s</u>
+  </h1>
+  <div id="demo">
+    <input type="text" id="editor" placeholder="Add new..." />          <i class="fa-regular fa-calendar-days"></i>
 
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
+    <button type="submit" id="checkboxAdd" onclick="addTodos()">
+      Add
+    </button>
+  </div>
+  <br />
 
-<button>Click me</button>
+  <!--  Table -->
+  <table id="tableid">
+    <tbody>
+      <tr >
+        <td class="row-data" >
+          <label for="chechInputid"
+            ><input
+              type="checkbox"
+              class="checkboxaInput"
+              id="chechInputid-1"
+            />Renew car insurance</label
+          >
+        </td>
+        <td class="table-date"  id="date_row1"></td>
+        <td  id="button_row1">
+          <button type="button" class="btn-icon" id="edittingRows" onclick="editRow()" >
+            <i class="fas fa-edit" aria-hidden="true"></i>
+          </button>
+        </td>
+        <td>
+          <button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this)">
+            <i class="fas fa-trash" ></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 </body>
 </html>
