@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/47ef46fcd3.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-a
+  wesome.min.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-      //Function runs on page load 
-$(document).ready(function(){
-  //Add a button click event
-  $("#checkboxAdd").click(function(){
-    addTodos();
-  });
-});
+  <script>
+    $(document).ready(function () {
+      //Add a button click event
+      $("#checkboxAdd").click(function () {
+        addTodos();
+      });
+    });
 
- function addTodos(){
+    function addTodos() {
 
-var myRows= $("#tableid  tr").length,
-$("#tableid  tr:last").after('\
-<tr>\
-<td class="row-data" > <label for="chechInputid-'+ myRows'" ><input type="checkbox"class="checkboxaInput"id="chechInputid-'+ myRows'" />Renew car insurance</label ></td>\
-        <td class="table-date"  id="date_row1"></td>\
-        <td  id="button_row1"> <button type="button" class="btn-icon" id="edittingRows" onclick="editRow()" > <i class="fas fa-edit" aria-hidden="true"></i> </button> </td>\
-        <td><button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this)"> <i class="fas fa-trash" ></i> </button>  </td>\
-      </tr>\
-      ');
+      var inputAccess = $('#editor').val()
+      var addedRow = "";
+      addedRow =
+        "<tr>" +
+        '<td class="row-data">' +
+        '<label for="chechInputid">' +
+        "<input " +
+        'type="checkbox" ' +
+        'class="checkboxaInput"' +
+        'id="chechInputid"' +
+        "/>" +
+        inputAccess +
+        "</label>" +
+        " </td>" +
+        '<td class="table-date"></td>' +
+        "<td>" +
+        '<button type="button" class="btn-icon" id="edittingRows">' +
+        '<i class="fas fa-edit" aria-hidden="true"></i>' +
+        "</button>" +
+        "</td>" +
+        "<td>" +
+        '<button type="button" class="btn-icon" id="deletingRows"  onclick="trashRow(this)">' +
+        '<i class="fas fa-trash" ></i>' +
+        "</button>" +
+        "</td>" +
+        "</tr>";
 
 
- }
+      $("#tableid").append(addedRow);
 
-    </script>
+
+
+
+    }
+
+    function trashRow(row_to_delete) {
+      $(row_to_delete).parents("tr").remove();
+    }  
+  </script>
 </head>
+
 <body>
   <h1 style="color: blue">
-    <img
-      src="../../includes/logo.png"
-      alt="Todo-s"
-      width="40px"
-      height="40px"
-    />
+    <img src="../../includes/logo.png" alt="Todo-s" width="40px" height="40px" />
     <u>My Todo-s</u>
   </h1>
   <div id="demo">
-    <input type="text" id="editor" placeholder="Add new..." />          <i class="fa-regular fa-calendar-days"></i>
+    <input type="text" id="editor" placeholder="Add new..." /> <i class="fa-regular fa-calendar-days"></i>
 
     <button type="submit" id="checkboxAdd" onclick="addTodos()">
       Add
@@ -55,25 +79,20 @@ $("#tableid  tr:last").after('\
   <!--  Table -->
   <table id="tableid">
     <tbody>
-      <tr >
-        <td class="row-data" >
-          <label for="chechInputid"
-            ><input
-              type="checkbox"
-              class="checkboxaInput"
-              id="chechInputid-1"
-            />Renew car insurance</label
-          >
+      <tr>
+        <td class="row-data">
+          <label for="chechInputid"><input type="checkbox" class="checkboxaInput" id="chechInputid" />Renew car
+            insurance</label>
         </td>
-        <td class="table-date"  id="date_row1"></td>
-        <td  id="button_row1">
-          <button type="button" class="btn-icon" id="edittingRows" onclick="editRow()" >
+        <td class="table-date" id="date_row1"></td>
+        <td id="button_row1">
+          <button type="button" class="btn-icon" id="edittingRows" onclick="editRow();">
             <i class="fas fa-edit" aria-hidden="true"></i>
           </button>
         </td>
         <td>
-          <button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this)">
-            <i class="fas fa-trash" ></i>
+          <button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this);">
+            <i class="fas fa-trash"></i>
           </button>
         </td>
       </tr>
@@ -81,4 +100,6 @@ $("#tableid  tr:last").after('\
   </table>
 
 </body>
+<script src=""></script>
+
 </html>
