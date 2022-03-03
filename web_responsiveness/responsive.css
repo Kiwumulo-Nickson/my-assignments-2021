@@ -42,7 +42,7 @@ body {
     background-color:white;
     text-align: right;
     }
-    .checkbox{
+    #chechInputid{
     display: inline-flex;
     align-items: center;
     cursor: pointer;

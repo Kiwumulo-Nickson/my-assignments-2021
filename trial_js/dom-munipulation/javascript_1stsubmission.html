@@ -1,128 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../web_responsiveness/responsive.css">
+  <script src="https://kit.fontawesome.com/47ef46fcd3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-a
+wesome.min.css" />
+
+  <title>JAVASCRIPT</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html>
+
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/47ef46fcd3.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-a
-wesome.min.css"
-    />
-
-    <title>JAVASCRIPT</title>
   </head>
+
   <body>
-    <!DOCTYPE html>
-    <html>
-      <head>
-      </head>
+    <h1 style="color: blue">
+      <img src="../../includes/logo.png" alt="Todo-s" width="40px" height="40px" />
+      <u>My Todo-s</u>
+    </h1>
+    <div id="demo">
+      <input type="text" id="editor" placeholder="Add new..." /> <i class="fa-regular fa-calendar-days"></i>
 
-      <body>
-        <h1 style="color: blue">
-          <img
-            src="../../includes/logo.png"
-            alt="Todo-s"
-            width="40px"
-            height="40px"
-          />
-          <u>My Todo-s</u>
-        </h1>
-        <div id="demo">
-          <input type="text" id="editor" placeholder="Add new..." />          <i class="fa-regular fa-calendar-days"></i>
+      <button type="submit" id="checkboxAdd" onclick="addTodos()">
+        Add
+      </button>
+    </div>
+    <br />
 
-          <button type="submit" id="checkboxAdd" onclick="addTodos()">
-            Add
-          </button>
-        </div>
-        <br />
-
-        <!--  Table -->
-        <table id="tableid">
-          <tbody>
-            <tr >
-              <td class="row-data" >
-                <label for="chechInputid"
-                  ><input
-                    type="checkbox"
-                    class="checkboxaInput"
-                    id="chechInputid"
-                  />Renew car insurance</label
-                >
-              </td>
-              <td class="table-date"  id="date_row1"></td>
-              <td  id="button_row1">
-                <button type="button" class="btn-icon" id="edittingRows" onclick="editRow()" >
-                  <i class="fas fa-edit" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this)">
-                  <i class="fas fa-trash" ></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <!--  Table -->
+    <table id="tableid">
+      <tbody>
+        <tr>
+          <td class="row-data">
+            <label for="chechInputid"><input type="checkbox" class="checkboxaInput" id="chechInputid" />Renew car
+              insurance</label>
+          </td>
+          <td class="table-date" id="date_row1"></td>
+          <td id="button_row1">
+            <button type="button" class="btn-icon" id="edittingRows" onclick="editRow()">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn-icon" id="deletingRows" onclick="trashRow(this)">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
 
-        <script>
-          // var todos = document.getElementById("tableid");
+    <script>
+      // var todos = document.getElementById("tableid");
 
-          function addTodos() {
-            var inputAccess = document.getElementById("editor").value;
+      function addTodos() {
+        var inputAccess = document.getElementById("editor").value;
 
-            var addedRow = "";
-            addedRow =
-              "<tr>" +
-              '<td class="row-data">' +
-              '<label for="chechInputid">' +
-              "<input " +
-              'type="checkbox" ' +
-              'class="checkboxaInput"' +
-              'id="chechInputid"' +
-              "/>" +
-              inputAccess +
-              "</label>" +
-              " </td>" +
-              '<td class="table-date"></td>' +
-              "<td>" +
-              '<button type="button" class="btn-icon" id="edittingRows">' +
-              '<i class="fas fa-edit" aria-hidden="true"></i>' +
-              "</button>" +
-              "</td>" +
-              "<td>" +
-              '<button type="button" class="btn-icon" id="deletingRows"  onclick="trashRow(this)">' +
-              '<i class="fas fa-trash" ></i>' +
-              "</button>" +
-              "</td>" +
-              "</tr>";
+        var addedRow = "";
+        addedRow =
+          "<tr>" +
+          '<td class="row-data">' +
+          '<label for="chechInputid">' +
+          "<input " +
+          'type="checkbox" ' +
+          'class="checkboxaInput"' +
+          'id="chechInputid"' +
+          "/>" +
+          inputAccess +
+          "</label>" +
+          " </td>" +
+          '<td class="table-date"></td>' +
+          "<td>" +
+          '<button type="button" class="btn-icon" id="edittingRows">' +
+          '<i class="fas fa-edit" aria-hidden="true"></i>' +
+          "</button>" +
+          "</td>" +
+          "<td>" +
+          '<button type="button" class="btn-icon" id="deletingRows"  onclick="trashRow(this)">' +
+          '<i class="fas fa-trash" ></i>' +
+          "</button>" +
+          "</td>" +
+          "</tr>";
 
-            document.getElementById("tableid").innerHTML += addedRow;
-          }
+        document.getElementById("tableid").innerHTML += addedRow;
+      }
 
-        //    Deleting a table row
-         function trashRow(row_to_delete){
-			 var deleteRow = row_to_delete.parentNode.parentNode;
-			 deleteRow.parentNode.removeChild(deleteRow);
-		 }
+      //    Deleting a table row
+      function trashRow(row_to_delete) {
+        var deleteRow = row_to_delete.parentNode.parentNode;
+        deleteRow.parentNode.removeChild(deleteRow);
+      }
 
-		
+
 
     //   REFERENCES
     // check.js
     // https://dev.to/th3n00bc0d3r/vanilla-js-to-jquery-the-noobs-guide-2ghg
     // https://morioh.com/p/62f03205a67e
     // https://properprogramming.com/tools/jquery-to-javascript-converter/
-    //   GREEKS FOR GREEKS      
+    //   GREEKS FOR GREEKS
     //  https://www.codemag.com/article/1511031/CRUD-in-HTML-JavaScript-and-jQuery        
-            
-        </script>
-      </body>
-    </html>
+
+    </script>
   </body>
+
+  </html>
+</body>
+
 </html>
